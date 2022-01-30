@@ -1,16 +1,16 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const tunerController = require('../controllers/songsController');
+const songsController = require('../controllers/songsController');
 
-express.use(express.json());
-express.use(cors());
+app.use(express.json());
+app.use(cors());
 
 app.get('/', (request, response) => {
     response.status(200).send('Welcome to your Tuner App!');
 });
 
-app.use('/songs', tunerController);
+app.use('/songs', songsController);
 
 app.get('*', (request, response) => {
     response.status(404).send('This is not the page you\'re looking for');

@@ -3,7 +3,7 @@ CREATE DATABASE songs_dev;
 
 \c songs_dev;
 
-CREATE table songs (
+CREATE TABLE songs (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     artist TEXT,

@@ -1,5 +1,4 @@
-const pgPromise = require('pg-promise');
-
+const pgPromise = require('pg-promise')();
 require('dotenv').config();
 // same task, different methods ⬆⬇
 // const dotenv = require('dotenv');

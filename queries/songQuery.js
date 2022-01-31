@@ -53,9 +53,28 @@ const deleteAndGet = async (id) => {
     };
 };
 
+const updateAndGet = async (id, { title, artist, album, length, is_favorite }) => {
+    try {
+        const updatedSong = await database.any(`
+            UPDATE songs_tb 
+            SET 
+                title = '${title}', 
+                artist = '${artist}', 
+                album = '${album}', 
+                length = '${length}', 
+                is_favorite = ${is_favorite} 
+            WHERE id = ${id} RETURNING * ; 
+        `);
+        return updatedSong;
+    } catch(error) {
+        return error;
+    }
+};
+
 module.exports = {
     getAllSongs,
     getSongById,
     postAndGet,
     deleteAndGet,
+    updateAndGet
 };

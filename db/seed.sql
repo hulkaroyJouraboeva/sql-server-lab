@@ -1,4 +1,4 @@
-\c songs_dev
+\c songs_db
 
 INSERT INTO 
     songs (title, artist, album, length, is_favorite)

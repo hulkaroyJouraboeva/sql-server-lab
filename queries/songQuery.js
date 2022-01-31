@@ -19,7 +19,23 @@ const getSongById = async (index) => {
     }
 };
 
+const postAndGet = async ({ title, artist, album, length, is_favorite }) => {
+    try {
+        const postedSong = await database.any(`
+            INSERT INTO songs 
+                (title, artist, album, length, is_favorite) 
+            VALUES
+                ('${title}', '${artist}', '${album}', '${length}', ${is_favorite})
+            RETURNING * ;`);
+
+        return postedSong;
+    } catch(error) {
+        return error;
+    }
+}
+
 module.exports = {
     getAllSongs,
-    getSongById
+    getSongById,
+    postAndGet,
 };

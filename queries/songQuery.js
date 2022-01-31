@@ -68,7 +68,7 @@ const updateAndGet = async (id, { title, artist, album, length, is_favorite }) =
         return updatedSong;
     } catch(error) {
         return error;
-    }
+    };
 };
 
 module.exports = {

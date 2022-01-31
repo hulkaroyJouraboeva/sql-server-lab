@@ -1,7 +1,7 @@
 \c songs_db
 
 INSERT INTO 
-    songs (title, artist, album, length, is_favorite)
+    songs_tb (title, artist, album, length, is_favorite)
 VALUES 
     ('Exit Music (For a Film)', 'Radiohead', 'OK Computer', '4:24', TRUE),
     ('Codex', 'Radiohead', 'The King of Limbs', '4:47', FALSE),

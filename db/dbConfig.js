@@ -4,13 +4,13 @@ require('dotenv').config();
 // const dotenv = require('dotenv');
 // dotenv.config();
 
-const connection = {
+const connectionInfo = {
     host: process.env.PG_HOST,
     port: process.env.PG_PORT,
     database: process.env.PG_DATABASE,
     user: process.env.PG_USER
 };
 
-const database = pgPromise(connection);
+const database = pgPromise(connectionInfo);
 
 module.exports = database;

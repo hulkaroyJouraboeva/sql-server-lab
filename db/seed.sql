@@ -2,7 +2,7 @@
 
 INSERT INTO 
     songs (title, artist, album, length, is_favorite)
-    VALUES 
+VALUES 
     ('Exit Music (For a Film)', 'Radiohead', 'OK Computer', '4:24', TRUE),
     ('Codex', 'Radiohead', 'The King of Limbs', '4:47', FALSE),
     ('No Surprises', 'Radiohead', 'OK Computer', '3:48', TRUE),
